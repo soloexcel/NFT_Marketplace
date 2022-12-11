@@ -1,0 +1,10 @@
+.helpCenter {
+    padding: .5rem 1rem;
+    transition: all .3s ease-out;
+}
+
+.helpCenter:hover {
+    color: var(--shadow-light-color);
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+}

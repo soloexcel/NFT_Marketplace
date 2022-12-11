@@ -1,0 +1,66 @@
+
+ /* global variables */
+:root {
+  --text-color: #fff;
+  --icons-color: #ffe;
+  --icons-light-color: #fff;
+  --icons-bg-color: #e9dfdf;
+  --shadow-dark-color: rgb(40, 38, 38);
+  --shadow-light-color: #857b7ba0;
+  --main-bg-color: #000;
+  --main-bg-gradient-color: ;
+  --box-shadow: .2rem .2rem .5rem var(--shadow-light-color), -.2rem -.2rem .5rem var(--shadow-light-color); 
+  /* --box-shadow-2: 0rem 0rem 0rem var(var(--shadow-light-color), -0.3rem -0.3rem 1rem var(var(--shadow-light-color))); */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: none;
+}
+
+::selection {
+  background: var(--icons-color);
+  color: var(--shadow-dark-color);
+}
+
+::-webkit-scrollbar{
+  width: 1rem;
+  border: 1px solid var(--main-bg-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--main-bg-color);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--icons-color);
+  border-radius: 2rem;
+  width: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
