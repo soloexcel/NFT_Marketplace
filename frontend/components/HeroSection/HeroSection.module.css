@@ -1,25 +1,43 @@
 .heroSection {
-    width: 80%;
-    margin: 2rem auto;
-}
+    width: 100%;
+    /* position: absolute;
+    top: 0; */
+    margin-bottom: 20rem; 
+
+    
+    
+} 
+
 .heroSection_box {
+    background-image: url("../../img/hero.jpg");
+    background-size: cover;
+    min-height: 50em;
+
+    /* display: flex; */
+    
+    
+
+}
+
+.heroContent {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5rem;
+    
+    
 }
 
-.heroSection_box_left {
+/* .heroSection_box_left {
     padding: 0 2rem 0 0;
-}
+} */
 
-.heroSection_box_left h1 {
+.heroContent h1 {
     font-size: clamp(3rem,  10vmin, 8rem);
     font-family: sans-serif;
     color: hsl(0 0% 98%);
+
 }
 
 
@@ -37,7 +55,7 @@
       left: 50%;
       transform: translate(-50%, 0);
       border-radius: 50%;
-      border: 6px solid hsl(280 80% 50%);
+      border: 6px solid rgb(55, 6, 79);
       /* Use a conic gradient mask to hide and show the bits you want */
       --spread: 140deg;
       --start: 290deg;
@@ -60,7 +78,7 @@
       left: 50%;
       transform: translate(-50%, -10%);
       border-radius: 50%;
-      border: 6px solid hsl(10 80% 50%);
+      border: 6px solid #a21e20;
     }
     
     .underlineClip:after {
@@ -72,35 +90,46 @@
       left: 50%;
       transform: translate(-50%, 0);
       border-radius: 50%;
-      border: 6px solid hsl(130 80% 50%);
+      border: 6px solid #8d1320;
       /* Use a clip-path to hide and show the bits you want */
       clip-path: polygon(0 0, 50% 50%, 100% 0);
 }
 
-.heroSection_box_left p {
+.heroContent p {
     margin-bottom: 2rem;
+    white-space: wrap;
+    
 }
 
 @media screen and (max-width:560px) {
     .heroSection {
         width: 90%;
-
     }
+    
+    .heroSection_box {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+
 }
 
 @media screen and (max-width: 880px) {
     .heroSection_box {
         grid-template-columns: 1fr;
         gap: 3rem;
+        white-space: nowrap;
         
     }
 
-    .heroSection_box_left {
-        padding-right: 2rem;
-    }
 
-    .heroSection_box_left h1 {
+
+    .heroContent h1, .heroContent p {
         font-size: 3rem;
         line-height: 1;
+    }
+
+    .heroContent h1, .heroContent p {
+        white-space: nowrap;
     }
 }

@@ -1,126 +1,218 @@
-import React, { useState, useEffect, useCallback} from 'react'
-import Image from 'next/image';
-import { AiFillFire, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import { MdVerified, MdTimer } from 'react-icons/md';
-import { TbArrowBigLeftLine, TbArrowBigRightLine } from 'react-icons/tb'; 
+import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import { AiFillFire, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { MdVerified, MdTimer } from "react-icons/md";
+import { TbArrowBigLeftLines, TbArrowBigRightLine } from "react-icons/tb";
 
-import { Button } from '../componentsIndex';
-import Style from './NFTSlider.module.css';
-import images from '../../img';
+//INTERNAL IMPORT
+import Style from "./NFTSlider.module.css";
+import images from "../../img";
+import Button from "../Button/Button";
 
 const NFTSlider = () => {
-    const [idNumber, setIdNumber] = useState(1);
-    // NFTs data
-    const sliderData = [
-        {
-            title: "Hello NFT",
-            name: "Solomon Excel",
-            collection: "GYM",
-            price: "0.0015 ETH",
-            like: "2334",
-            image: images.user1,
-            nftImages: images.nft_image_1,
-            id: 1,
-            time: {
-                days: 27,
-                hours: 10,
-                minutes: 11,
-                seconds: 35,
-            }
-        },
+  const [idNumber, setIdNumber] = useState(0);
 
-        {
-            title: "Bob NFT",
-            name: "Bobby Bob",
-            collection: "GYM",
-            price: "0.0000000123 ETH",
-            like: "23",
-            image: images.user1,
-            nftImages: images.nft_image_2,
-            id: 2,
-            time: {
-                days: 27,
-                hours: 10,
-                minutes: 11,
-                seconds: 35,
-            }
-        },
+  const sliderData = [
+    {
+      title: "Hello NFT",
+      id: 1,
+      name: "Solomon Excel",
+      collection: "GYm",
+      price: "00664 ETH",
+      like: 243,
+      image: images.user1,
+      nftImage: images.nft_image_1,
+      time: {
+        days: 21,
+        hours: 40,
+        minutes: 81,
+        seconds: 15,
+      },
+    },
+    {
+      title: "Buddy NFT",
+      id: 2,
+      name: "Jane Walker",
+      collection: "Home",
+      price: "0.7854 ETH",
+      like: 243,
+      image: images.user2,
+      nftImage: images.nft_image_2,
+      time: {
+        days: 77,
+        hours: 11,
+        minutes: 21,
+        seconds: 45,
+      },
+    },
+    {
+      title: "Gym NFT",
+      id: 3,
+      name: "Jerry Tom",
+      collection: "GYm",
+      price: "0534 ETH",
+      like: 243,
+      image: images.user3,
+      nftImage: images.nft_image_3,
+      time: {
+        days: 37,
+        hours: 20,
+        minutes: 11,
+        seconds: 55,
+      },
+    },
+    {
+      title: "Home NFT",
+      id: 4,
+      name: "Bob Brandy",
+      collection: "GYm",
+      price: "124 ETH",
+      like: 243,
+      image: images.user4,
+      nftImage: images.nft_image_1,
+      time: {
+        days: 87,
+        hours: 29,
+        minutes: 10,
+        seconds: 15,
+      },
+    },
+  ];
 
-        {
-            title: "Hello NFT",
-            name: "Solomon Excel",
-            collection: "GYM",
-            price: "0.0015 ETH",
-            like: "2334",
-            image: images.user1,
-            nftImages: images.nft_image_3,
-            id: 3,
-            time: {
-                days: 27,
-                hours: 10,
-                minutes: 11,
-                seconds: 35,
-            }
-        },
+  //-------increment
+  const increment = useCallback(() => {
+    if (idNumber + 1 < sliderData.length) {
+      setIdNumber(idNumber + 1);
+    }
+  }, [idNumber, sliderData.length]);
 
-        {
-            title: "Doge NFT",
-            name: "Shagi Sigi",
-            collection: "Adventure",
-            price: "0.0005 ETH",
-            like: "542",
-            image: images.user4,
-            nftImages: images.nft_image_1,
-            id: 4,
-            time: {
-                days: 27,
-                hours: 10,
-                minutes: 11,
-                seconds: 35,
-            }
-        }
-    ];
+  //-------decrement
+  const decrement = useCallback(() => {
+    if (idNumber > 0) {
+      setIdNumber(idNumber - 1);
+    }
+  }, [idNumber]);
 
   return (
     <div className={Style.NFTSlider}>
-        <div className={Style.NFTSlider_box}>
-            <div className={Style.NFTSlider_box_left}>
-                <h2>
-                    {sliderData[idNumber].title}
-                </h2>
-                <div className={Style.NFTSlider_box_left_creator}>
-                <div className={Style.NFTSlider_box_left_creator_profile}>
-                    <Image className={Style.NFTSlider_box_left_creator_profile_img} src={sliderData[idNumber].image} alt="profile image" width={50} height={50}></Image>
-
-                    <div className={Style.NFTSlider_box_left_creator_profile_img}>
-                        <p>Creator</p>
-                        <h4>{sliderData[idNumber].name}{" "} <span><MdVerified /></span>
-                        </h4>
-                    </div>
-                </div>
-
-                <div className={Style.NFTSlider_box_left_creator_collection_info}>
-                    <p>Collection</p>
-                    <h4>{sliderData[idNumber].collection}</h4>
-                </div>
-                </div>
-                <div className={Style.NFTSlider_box_left_bidding}>
-                    <div className={Style.NFTSlider_box_left_bidding_box }>
-                        <small>Current Bid</small>
-                        <p>{sliderData[idNumber].price} <span>$,5, 1000</span></p>
-                    </div>
-
-                    <p className={Style.NFTSlider_box_left_bidding_box_auction}>
-                        <MdTimer  className={Style.NFTSlider_box_left_bidding_box_icon}/>
-                        <span>Auction ending inc</span>
-                    </p>
-
-                    <dir className={Style.NFTSlider_box_left_bidding__timer}></dir>
-                </div>
+      <div className={Style.NFTSlider_box}>
+        <div className={Style.NFTSlider_box_left}>
+          <h2>{sliderData[idNumber].title}</h2>
+          <div className={Style.NFTSlider_box_left_creator}>
+            <div className={Style.NFTSlider_box_left_creator_profile}>
+              <Image
+                className={Style.NFTSlider_box_left_creator_profile_img}
+                src={sliderData[idNumber].image}
+                alt="profile image"
+                width={50}
+                height={50}
+              />
+              <div className={Style.NFTSlider_box_left_creator_profile_info}>
+                <p>Creator</p>
+                <h4>
+                  {sliderData[idNumber].name}{" "}
+                  <span>
+                    <MdVerified />
+                  </span>
+                </h4>
+              </div>
             </div>
-        </div>
-    </div>
-  )
-}
 
-export default NFTSlider
+            <div className={Style.NFTSlider_box_left_creator_collection}>
+              <AiFillFire
+                className={Style.NFTSlider_box_left_creator_collection_icon}
+              />
+
+              <div
+                className={Style.NFTSlider_box_left_creator_collection_info}
+              >
+                <p>Collection</p>
+                <h4>{sliderData[idNumber].collection}</h4>
+              </div>
+            </div>
+          </div>
+
+          <div className={Style.NFTSlider_box_left_bidding}>
+            <div className={Style.NFTSlider_box_left_bidding_box}>
+              <small>Current Bid</small>
+              <p>
+                {sliderData[idNumber].price} <span>$221,21</span>
+              </p>
+            </div>
+
+            <p className={Style.NFTSlider_box_left_bidding_box_auction}>
+              <MdTimer
+                className={Style.NFTSlider_box_left_bidding_box_icon}
+              />
+              <span>Auction ending in</span>
+            </p>
+
+            <div className={Style.NFTSlider_box_left_bidding_box_timer}>
+              <div
+                className={Style.NFTSlider_box_left_bidding_box_timer_item}
+              >
+                <p>{sliderData[idNumber].time.days}</p>
+                <span>Days</span>
+              </div>
+
+              <div
+                className={Style.NFTSlider_box_left_bidding_box_timer_item}
+              >
+                <p>{sliderData[idNumber].time.hours}</p>
+                <span>Hours</span>
+              </div>
+
+              <div
+                className={Style.NFTSlider_box_left_bidding_box_timer_item}
+              >
+                <p>{sliderData[idNumber].time.minutes}</p>
+                <span>mins</span>
+              </div>
+
+              <div
+                className={Style.NFTSlider_box_left_bidding_box_timer_item}
+              >
+                <p>{sliderData[idNumber].time.seconds}</p>
+                <span>secs</span>
+              </div>
+            </div>
+
+            <div className={Style.NFTSlider_box_left_button}>
+              <Button btnName="Place" handleClick={() => {}} />
+              <Button btnName="View" handleClick={() => {}} />
+            </div>
+          </div>
+
+          <div className={Style.NFTSlider_box_left_sliderBtn}>
+            <TbArrowBigLeftLines
+              className={Style.NFTSlider_box_left_sliderBtn_icon}
+              onClick={() => decrement()}
+            />
+            <TbArrowBigRightLine
+              className={Style.NFTSlider_box_left_sliderBtn_icon}
+              onClick={() => increment()}
+            />
+          </div>
+        </div>
+
+
+        <div className={Style.NFTSlider_box_right}>
+          <div className={Style.NFTSlider_box_right_box}>
+            <Image
+              src={sliderData[idNumber].nftImage}
+              alt="NFT IMAGE"
+              className={Style.NFTSlider_box_right_box_img}
+            />
+
+            <div className={Style.NFTSlider_box_right_box_like}>
+              <AiFillHeart />
+              <span>{sliderData[idNumber].like}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NFTSlider;
