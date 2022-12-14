@@ -1,0 +1,151 @@
+.subscribe {
+    width: 80%;
+    margin: 4rem auto;
+    position: relative;
+    top: 500px;
+
+}
+
+.subscribe_box {
+    display: grid;
+    grid-template-areas: 
+    'txt txt txt img img img img'
+    'txt txt txt img img img img'
+    'txt txt txt img img img img'
+    'txt txt txt img img img img';
+    /* gap: 2rem; */
+}
+
+.subscribe_box_left {
+    grid-area: txt;
+    padding: 1.5rem;
+}
+
+
+.subscribe_box_left h2{
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.subscribe_box p{
+    font-size: 1.2rem;
+}
+
+.subscribe_box_left_box {
+    /* padding: .5rem; */
+    margin-top: 2rem;
+
+}
+
+.subscribe_box_left_box span {
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    text-align: center;
+}
+
+.subscribe_box_left_box small{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: .5rem;
+}
+
+.subscribe_box_left_input {
+    width: 50%;
+    border-radius: 2rem;
+    padding: .5rem;
+    margin: 3rem 0 ;
+    border: 1px double var(--icons-color);
+
+    display: flex;
+    align-items: center;
+
+    
+
+}
+
+.subscribe_box_left_input input {
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+
+}
+
+.subscribe_box_left_input_icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.subscribe_box_right {
+    grid-area: img;
+}
+
+
+/* Media */
+@media screen and (min-device-width: 320px) and (max-device-width: 768px){
+    .subscribe_box{
+        width: 90%;
+        display: grid;
+        grid-template-areas: 
+        'txt'
+        'img'
+        ;
+        gap: 4rem;
+    }
+
+    .subscribe_box_left {
+        grid-area: txt;
+        padding: 1.5rem;
+    }
+
+    .subscribe_box_right {
+        grid-area: img;
+    }
+
+
+    .subscribe_box_left_input{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .subscribe_box_left h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    .subscribe_box{
+        width: 90%;
+        display: grid;
+        grid-template-areas: 
+        'txt img';
+        gap: 2rem;
+    }
+
+    .subscribe_box_left {
+        grid-area: txt;
+        padding: 1.5rem;
+    }
+
+    .subscribe_box_right {
+        grid-area: img;
+    }
+
+    .subscribe_box_left_input{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .subscribe_box_left h2{
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .subscribe_box_left_box small {
+        white-space: nowrap;
+    }
+}
