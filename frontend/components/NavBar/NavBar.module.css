@@ -1,29 +1,37 @@
 .navbar{
     width: 100%;
     padding-inline: 1.5rem;
-    position: -webkit-sticky;
+    z-index: 2222;
+    /* position: -webkit-sticky; */
     position: sticky;
     top: 0;
-    z-index: 1;
-    margin-top: 1.5rem;
 
 }
+
+.navbar.active {
+    background-image: linear-gradient(to right, var(--main-bg-color), var(--main-bg-gradient-color-A), var(--main-bg-gradient-color-B));
+
+    box-shadow: var(--box-shadow-two);
+} 
 
 .navbar_container{ 
     width: 80%;
     margin: 0 auto;
+    padding: 1rem;
 
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    
 }
 
 .navbar_container_left{
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+
 }
 
 .navbar_container_left_box_input_box{
@@ -55,6 +63,8 @@
     grid-template-columns: 1fr 1fr 0.5fr 1fr 0.3fr;
     gap: 1rem;
     align-items: center;
+
+    position: relative;
 }
 
 .navbar_container_right_discover,
