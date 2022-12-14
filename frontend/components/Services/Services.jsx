@@ -8,56 +8,56 @@ const Services = () => {
   return (
     <div className={Style.services}>
       <div className={Style.services_box}>
+        
         <div className={Style.services_box_item}>
-          <Image src={images.service1} alt="Filter" width={100} height={100}
-          ></Image>
-
           <p className={Style.services_box_item_step}>
-            <span>Step 1</span>
+              <span>1</span>
           </p>
-
+          <Image className = {Style.img} src={images.home} alt="Filter" width={50} height={50}
+          />
+          <div className={Style.services_content_box}>
           <h3>Filter and Discover</h3>
           <p>Connect with wallet, discover, buy NFTs, Sell your NFTs for cool money.</p>
+          </div>
+        </div>
+          
 
+        <div className={Style.services_box_item}>
+          <p className={Style.services_box_item_step}>
+              <span>2</span>
+          </p>
+          <Image className = {Style.img} src={images.wallet} alt="Filter" width={50} height={50}
+          />
+          <div className={Style.services_content_box}>
+          <h3>Filter and Discover</h3>
+          <p>Connect with wallet, discover, buy NFTs, Sell your NFTs for cool money.</p>
+          </div>
         </div>
 
         <div className={Style.services_box_item}>
-          <Image src={images.service2} alt="Filter" width={100} height={100}
-          ></Image>
-
           <p className={Style.services_box_item_step}>
-            <span>Step 2</span>
+              <span>3</span>
           </p>
-
+          <Image className = {Style.img} src={images.order} alt="Filter" width={50} height={50}
+          />
+          <div className={Style.services_content_box}>
           <h3>Filter and Discover</h3>
           <p>Connect with wallet, discover, buy NFTs, Sell your NFTs for cool money.</p>
-
+          </div>
         </div>
 
         <div className={Style.services_box_item}>
-          <Image src={images.service3} alt="Filter" width={100} height={100}
-          ></Image>
-
           <p className={Style.services_box_item_step}>
-            <span>Step 3</span>
+              <span>4</span>
           </p>
-
+          <Image className = {Style.img} src={images.cash} alt="Filter" width={50} height={50}
+          />
+          <div className={Style.services_content_box}>
           <h3>Filter and Discover</h3>
           <p>Connect with wallet, discover, buy NFTs, Sell your NFTs for cool money.</p>
+          </div>
         </div>
 
-        <div className={Style.services_box_item}>
-          <Image src={images.service4} alt="Filter" width={100} height={100}
-          ></Image>
-
-          <p className={Style.services_box_item_step}>
-            <span>Step 4</span>
-          </p>
-
-          <h3>Filter and Discover</h3>
-          <p>Connect with wallet, discover, buy NFTs, Sell your NFTs for cool money.</p>
-
-        </div>
       </div>
     </div>
   )

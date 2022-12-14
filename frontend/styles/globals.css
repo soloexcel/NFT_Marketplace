@@ -13,7 +13,7 @@
   --main-bg-gradient-color-A: #0b0811;
   --main-bg-gradient-color-B: #320b12;
   --box-shadow: .2rem .2rem .5rem var(--shadow-light-color), -.2rem -.2rem .5rem var(--shadow-light-color); 
-  /* --box-shadow-2: 0rem 0rem 0rem var(var(--shadow-light-color), -0.3rem -0.3rem 1rem var(var(--shadow-light-color))); */
+  --box-shadow-two: .1rem .1rem .3rem var(--shadow-dark-color), -.1rem -.1rem .2rem var(--shadow-dark-color);
 }
 
 html,
@@ -22,8 +22,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  /* background-color: linear-gradient(var(--main-bg-color)); */
-  
   background-image: linear-gradient(to right, var(--main-bg-color), var(--main-bg-gradient-color-A), var(--main-bg-gradient-color-B));
   color: var(--text-color);
 
@@ -67,6 +65,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background-image: linear-gradient(to right, var(--main-bg-color), var(--main-bg-gradient-color-A), var(--main-bg-gradient-color-B));
   }
 }

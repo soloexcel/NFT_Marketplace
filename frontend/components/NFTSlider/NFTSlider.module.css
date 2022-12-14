@@ -1,7 +1,10 @@
 .NFTSlider_box{
     margin:  0 auto;
-    width: 80%;
+    width: 60%;
     padding-block: 8rem; 
+    position: relative;
+    top: 500px;
+    z-index: 1111;
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -15,7 +18,7 @@
     box-shadow: var(--box-shadow-2);
     border-radius: 1rem;
     padding: 2rem;
-    z-index: 1111;
+    z-index: 1;
     height: 90vh;
 }
 
