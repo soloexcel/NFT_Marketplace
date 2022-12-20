@@ -10,7 +10,6 @@
 
 .navbar.active {
     background-image: linear-gradient(to right, var(--main-bg-color), var(--main-bg-gradient-color-A), var(--main-bg-gradient-color-B));
-
     box-shadow: var(--box-shadow-two);
 } 
 
@@ -31,7 +30,6 @@
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-
 }
 
 .navbar_container_left_box_input_box{
@@ -41,7 +39,6 @@
     align-items: center;
     padding: 0.5rem;
     border-radius: 2rem;
-    
 }
 
 .navbar_container_left_box_input_box input {
