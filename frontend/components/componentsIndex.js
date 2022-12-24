@@ -8,5 +8,7 @@ import Subscription from './Subscription/Subscription';
 import Title from './Title/Title';
 import Category from './Category/Category';
 import Filter from './Filter/Filter';
+import Card from './CardSection/Card';
+import Collection from './Collection/Collection';
 
-export { Button, Footer, NavBar, HeroSection, Services, NFTSlider, Subscription, Title, Category, Filter }
+export { Button, Footer, NavBar, HeroSection, Services, NFTSlider, Subscription, Title, Category, Filter, Card, Collection }
