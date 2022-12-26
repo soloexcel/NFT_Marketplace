@@ -9,10 +9,8 @@
 
 .daysComponent:hover{
     box-shadow: var(--box-shadow);
-    transform: translateX(8px)
+    transform: translateX(-8px)
     translateY(8px);
-    
-    backdrop-blur: 10px;
 }
 
 

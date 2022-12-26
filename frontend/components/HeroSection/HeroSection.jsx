@@ -15,10 +15,10 @@ const HeroSection = () => {
                     Discover, <span className={Style.underlined + ' ' + Style.underlineClip}>Sell</span><br />& Collect <span className={Style.underlined + ' ' + Style.underlineMask}>Rare</span><br /><span className={Style.underlined  + ' ' + Style.underlineOverflow}>NFTs</span>
             </h1>
 
-                <p>
-                    Discover the most outsanding NFTs from the comfort of your home. Explore your choices.
-                </p>
-                <Button btnName='Explore' handleClick={()=> {}}/>
+                <h2>
+                    Welcome to prowess NFT Marketplace!, we offer a wide <span className={Style.wrap}>selection of unique and one-of-a-kind NFTs for you to browse and purchase.</span>
+                </h2>
+                <Button btnName='Browse' handleClick={()=> {}}/>
             </div>
 
             {/* <div>

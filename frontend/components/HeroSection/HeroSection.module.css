@@ -95,11 +95,15 @@
       clip-path: polygon(0 0, 50% 50%, 100% 0);
 }
 
-.heroContent p {
+.heroContent h2 {
     margin-bottom: 2rem;
-    white-space: wrap;
-    
 }
+
+.wrap {
+    display: block;
+    white-space: wrap;
+} 
+
 
 @media screen and (max-width:560px) {
     .heroSection {

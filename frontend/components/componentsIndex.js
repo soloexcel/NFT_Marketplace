@@ -10,5 +10,7 @@ import Category from './Category/Category';
 import Filter from './Filter/Filter';
 import Card from './CardSection/Card';
 import Collection from './Collection/Collection';
+import FollowerSection from './FollowerSection/FollowerSection';
+import Audio from './Audio/Audio';
 
-export { Button, Footer, NavBar, HeroSection, Services, NFTSlider, Subscription, Title, Category, Filter, Card, Collection }
+export { Button, Footer, NavBar, HeroSection, Services, NFTSlider, Subscription, Title, Category, Filter, Card, Collection, FollowerSection, Audio }
