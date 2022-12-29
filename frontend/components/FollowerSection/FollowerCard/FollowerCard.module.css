@@ -47,12 +47,19 @@
     text-align: center;
     margin-top: -2rem;
     position: relative;
+
+    
+ 
 }
 
 .FollowerCard_box_profile_img{
+    background-color: var(--shadow-dark-color);
     border-radius: 50%;
-    padding: 1rem;
-    z-index: 22;
+    padding: .2rem;
+    width: 20%;
+    height: auto;
+    
+
 }
 
 .FollowerCard_box_profile::before{
@@ -60,7 +67,6 @@
     content: "";
     width: 5rem;
     height: 5rem;
-    background-color: var(--main-bg-color);
     border-radius: 50%;
     top: -20%;
     left: 38%;
@@ -72,7 +78,6 @@
     align-items: center;
     line-height: 0;
     justify-content: space-between;
-    margin-top: 2rem;
     padding-inline: 1rem;
     padding-bottom: 1rem;
 }

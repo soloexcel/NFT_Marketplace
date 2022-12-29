@@ -32,7 +32,7 @@
 
 .notification_box:hover {
     background-color: var(--shadow-light-color);
-    color: var(--shadow-dark-color);
+    color: var(--main-bg-color);
     border-radius: .3rem;
 }
 
@@ -62,17 +62,34 @@
     background-color: red;
 }
 
-@media screen and (max-width: 35rem) {
+@media screen and (min-device-width: 320px) {
     .notification {
-        width: 20rem;
-        left: -15rem;    
+        width: 18em;
+        left: -5.4rem;
     }
-    
+
     .notification_box {
-        padding: .3rem;
+        padding: .5rem;
     }
 
     .notification_box p {
-        font-size: .8rem;
+        white-space: nowrap;
+        font-size: 12px;
     }
 }
+@media screen and (min-device-width: 35em) and (max-device-width: 768px){
+    .notification {
+        width: 25rem;
+        left: -15.5rem;    
+    }
+    
+    .notification_box p {
+        font-size: 18px;
+    }
+    .notification_box_info  h4  {
+        font-size: 18px;
+    }
+
+}
+
+

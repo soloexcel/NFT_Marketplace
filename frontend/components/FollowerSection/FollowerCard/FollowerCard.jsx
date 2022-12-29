@@ -6,7 +6,8 @@ import { MdVerified } from 'react-icons/md';
 import Style from './FollowerCard.module.css';
 import images from '../../../img';
 
-const FollowerCard = ({ i, el }) => {
+
+const FollowerCard = ({ el, i }) => {
     const [following, setFollowing] = useState(false);
   
     const followMe = () => {
@@ -40,10 +41,10 @@ const FollowerCard = ({ i, el }) => {
             <Image
               className={Style.FollowerCard_box_profile_img}
               alt="profile picture"
-              width={30}
-              height={30}
-            //   src={images.user}
-              src={el.user || images[`user${i + 1}`]}
+              width={50}
+              height={50}
+              src={el.user}
+              // src={el.user || images[`user${i + 1}`]}
             />
           </div>
   

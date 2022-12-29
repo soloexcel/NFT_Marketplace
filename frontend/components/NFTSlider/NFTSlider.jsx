@@ -65,7 +65,7 @@ const NFTSlider = () => {
       title: "Home NFT",
       id: 4,
       name: "Bob Brandy",
-      collection: "GYm",
+      collection: "Gym",
       price: "124 ETH",
       like: 243,
       image: images.user4,

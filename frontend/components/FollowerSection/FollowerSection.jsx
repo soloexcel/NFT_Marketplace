@@ -11,7 +11,59 @@ import FollowerCard from './FollowerCard/FollowerCard';
 import images from '../../img';
 
 const FollowerSection = ({ TopCreator }) => {
-    const CardArray = [1,2,3,4,5,6,7,8];
+    const CardArray = [
+      {
+        background: images.creatorbackground6,
+        user: images.user6,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground7,
+        user: images.user7,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground8,
+        user: images.user8,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      { 
+        background: images.creatorbackground3,
+        user: images.user3,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground4,
+        user: images.user4,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground5,
+        user: images.user5,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground6,
+        user: images.user6,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground5,
+        user: images.user5,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground6,
+        user: images.user6,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      },
+      {
+        background: images.creatorbackground7,
+        user: images.user7,
+        seller: "7200d8d8390d9993ujdc93900399djj277x",
+      }
+    ];
+
     const FollowingArray = [
         {
           background: images.creatorbackground3,
@@ -42,8 +94,10 @@ const FollowerSection = ({ TopCreator }) => {
           background: images.creatorbackground2,
           user: images.user2,
           seller: "7200d8d8390d9993ujdc93900399djj277x",
-        },
+        }
       ];
+
+
       const NewsArray = [
         {
           background: images.creatorbackground1,
@@ -84,7 +138,7 @@ const FollowerSection = ({ TopCreator }) => {
           background: images.creatorbackground8,
           user: images.user8,
           seller: "7200d8d8390d9993ujdc93900399djj277x",
-        },
+        }
       ];
     
       const [popular, setPopular] = useState(true);
@@ -135,7 +189,7 @@ const FollowerSection = ({ TopCreator }) => {
       {popular && (
         <div className={Style.followerTab_box}>
           {CardArray.map((el, i) => (
-            <FollowerCard key={i + 1} i={i} el={el} />
+            <FollowerCard key={i + 1} el={el} i={i} />
           ))}
         </div>
       )}
@@ -143,7 +197,7 @@ const FollowerSection = ({ TopCreator }) => {
       {following && (
         <div className={Style.followerTab_box}>
           {FollowingArray.map((el, i) => (
-            <FollowerCard key={i + 1} i={i} el={el} />
+            <FollowerCard key={i + 1} el={el} i={i} />
           ))}
         </div>
       )}
@@ -151,7 +205,7 @@ const FollowerSection = ({ TopCreator }) => {
       {news && (
         <div className={Style.followerTab_box}>
           {NewsArray.map((el, i) => (
-            <FollowerCard key={i + 1} i={i} el={el} />
+            <FollowerCard key={i + 1} el={el} i={i} />
           ))}
         </div>
       )}

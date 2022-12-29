@@ -98,7 +98,6 @@ const SideBar = ({setSideMenu}) => {
       <GrClose className={Style.sideBar_closeBtn} onClick={() => closeSideBar()}/>
 
       <div className={Style.sideBar_box}>
-        <Image src={images.logo} alt="logo" width={150} height={150}/>
         <p>Discover the most outstanding articles on all the topics of NFT & your own stories and share them</p>
         <div className={Style.sideBar_social}>
           <a href="#">

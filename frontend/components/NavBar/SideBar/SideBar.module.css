@@ -5,6 +5,9 @@
 }
 
 .sideBar_closeBtn {
+    color: var(--icons-color);
+    background-color: var(--icons-color);
+    font-size: 3rem;
     position: absolute;
     top: 3rem;
     right: 2rem;
@@ -64,4 +67,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (min-device-width: 320px) {
+    .sideBar {
+        padding-top: 10rem;
+        width: 90%;
+        
+    }
+
+    .sideBar_closeBtn {
+        right: 5rem;
+    }
+
+
+
+    
+    
 }

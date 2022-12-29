@@ -19,3 +19,9 @@
 
 }
 
+@media screen and (min-device-width: 320px) {
+    .button{
+        padding: 1rem 1.5rem;
+    }
+    
+}

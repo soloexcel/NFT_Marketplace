@@ -11,7 +11,23 @@ import Style from './Card.module.css';
 const Card = ({ NFTData }) => {
 
     const [like, setLike] = useState(true);
-    const featureArray = [1,2,3,4,5,6,7,8,9];
+
+    const featureArray = [
+      images.nft_image_3,
+      images.nft_image_2,
+      images.nft_image_1,
+      images.nft_image_2,
+      images.nft_image_3,
+      images.nft_image_2,
+      images.nft_image_1,
+      images.nft_image_2,
+      images.nft_image_3,
+      images.nft_image_2,
+      images.nft_image_3,
+      images.nft_image_3,
+      images.nft_image_2,
+      images.nft_image_3,
+    ];
 
 
 
@@ -31,7 +47,7 @@ const Card = ({ NFTData }) => {
               <div className={Style.NFTCard_box} key={i + 1}>
                 <div className={Style.NFTCard_box_img}>
                   <Image
-                    src={images.nft_image_1}
+                    src={el}
                     alt="NFT images"
                     width={400}
                     height={400}

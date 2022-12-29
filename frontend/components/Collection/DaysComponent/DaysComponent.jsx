@@ -6,13 +6,13 @@ import { MdVerified } from "react-icons/md";
 import Style from "./DaysComponent.module.css";
 import images from "../../../img";
 
-const DaysComponents = () => {
+const DaysComponents = ({ el, i}) => {
   return (
     <div className={Style.daysComponent}>
       <div className={Style.daysComponent_box}>
         <div className={Style.daysComponent_box_img}>
           <Image
-            src={images.creatorbackground1}
+            src={el.background}
             className={Style.daysComponent_box_img_img}
             alt="profile background"
             width={300}
@@ -23,7 +23,7 @@ const DaysComponents = () => {
 
         <div className={Style.daysComponent_box_profile}>
           <Image
-            src={images.creatorbackground2}
+            src={el.background}
             alt="profile"
             width={100}
             height={100}
@@ -31,7 +31,7 @@ const DaysComponents = () => {
             
           />
           <Image
-            src={images.creatorbackground3}
+            src={el.background}
             alt="profile"
             width={100}
             height={100}
@@ -39,7 +39,7 @@ const DaysComponents = () => {
             
           />
           <Image
-            src={images.creatorbackground4}
+            src={el.background}
             alt="profile"
             width={100}
             height={100}
@@ -53,7 +53,7 @@ const DaysComponents = () => {
           <div className={Style.daysComponent_box_title_info}>
             <div className={Style.daysComponent_box_title_info_profile}>
               <Image
-                src={images.user1}
+                src={el.user}
                 alt="profile"
                 width={30}
                 height={30}

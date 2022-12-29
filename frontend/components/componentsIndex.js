@@ -12,5 +12,9 @@ import Card from './CardSection/Card';
 import Collection from './Collection/Collection';
 import FollowerSection from './FollowerSection/FollowerSection';
 import Audio from './Audio/Audio';
+import Slider from './Slider/Slider';
+import LikeProfile from './LikeProfile/LikeProfile'
+import Brand from './Brand/Brand';
+import Video from './Video/Video';
 
-export { Button, Footer, NavBar, HeroSection, Services, NFTSlider, Subscription, Title, Category, Filter, Card, Collection, FollowerSection, Audio }
+export { Button, Footer, NavBar, HeroSection, Services, NFTSlider, Subscription, Title, Category, Filter, Card, Collection, FollowerSection, Audio, Slider, LikeProfile, Brand, Video }

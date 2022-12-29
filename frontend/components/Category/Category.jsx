@@ -60,7 +60,7 @@ const Category = () => {
                   src={el.image}
                   className={Style.category_box_img}
                   alt="Background image"
-                  width={300}
+                  width={400}
                   height={200}
                   
                 />

@@ -168,6 +168,8 @@
 
     .sideBar{
         display: block;
+        left: -10px;
+        
     }
 }
 
